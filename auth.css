@@ -1,0 +1,39 @@
+.auth-body {
+  background: url("/images/hogwarts.jpg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.auth-box {
+  background: rgba(0,0,0,0.7);
+  padding: 40px;
+  width: 350px;
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 0 20px gold;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 12px;
+  background: gold;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.auth-box button:hover {
+  background: #ffdd55;
+}

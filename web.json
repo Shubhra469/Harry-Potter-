@@ -1,0 +1,36 @@
+{
+  "houses": [
+    {
+      "name": "Gryffindor",
+      "colors": "Scarlet and Gold",
+      "symbol": "Lion",
+      "head": "Professor McGonagall",
+      "traits": ["Bravery", "Courage", "Chivalry"],
+      "description": "Home to the brave and daring. Gryffindors stand up for what is right and never back down from a challenge."
+    },
+    {
+      "name": "Slytherin",
+      "colors": "Green and Silver",
+      "symbol": "Serpent",
+      "head": "Professor Severus Snape",
+      "traits": ["Ambition", "Cunning", "Resourcefulness"],
+      "description": "Known for ambition and cleverness. Slytherins are resourceful and determined to achieve greatness."
+    },
+    {
+      "name": "Ravenclaw",
+      "colors": "Blue and Bronze",
+      "symbol": "Eagle",
+      "head": "Professor Filius Flitwick",
+      "traits": ["Intelligence", "Wit", "Creativity"],
+      "description": "The house for the wise and witty. Ravenclaws value knowledge, learning, and originality."
+    },
+    {
+      "name": "Hufflepuff",
+      "colors": "Yellow and Black",
+      "symbol": "Badger",
+      "head": "Professor Pomona Sprout",
+      "traits": ["Loyalty", "Hard Work", "Kindness"],
+      "description": "Hufflepuffs are known for loyalty and fairness. They believe in doing what’s right and value teamwork."
+    }
+  ]
+}

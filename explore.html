@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore Spells</title>
+  <link rel="stylesheet" href="web.css" />
+  <link rel="stylesheet" href="spells.css" />
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">Harry Potter</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="spells-hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Explore the Most Iconic Spells</h1>
+      <p>Dive into the world of magic — charms, curses, jinxes & more.</p>
+
+      <div class="search-bar">
+        <input type="text" id="searchSpell" placeholder="Search a spell...">
+        <input type="text" id="filterType" placeholder="Filter by type...">
+        <select id="sortBy">
+          <option value="">Sort by...</option>
+          <option value="name">Name</option>
+          <option value="type">Type</option>
+        </select>
+        <a href="spells-crud.html" class="btn-add">+ Add Spell</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="spells-container" id="spellsContainer"></section>
+
+  <script src="spells.js"></script>
+</body>
+</html>

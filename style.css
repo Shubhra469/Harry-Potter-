@@ -1,0 +1,287 @@
+/* Reset some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Georgia", serif;
+  color: white;
+  background-color: black;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1a1a2e;
+  padding: 15px 40px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: gold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: gold;
+}
+
+/* Hero Section */
+.hero {
+  background: url("hogwarts.jpg") no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  padding: 0 20px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: #3c3c66;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: gold;
+  color: black;
+}
+/* Sorting Hat Section */
+.sorting {
+  background: #200d3c;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.sorting h2 {
+  font-size: 22px;
+  margin-bottom: 50px;
+  font-style: italic;
+  color: #f5f5f5;
+}
+
+.houses {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.house {
+  text-align: center;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.house img {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.3));
+}
+
+.house p {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: gold;
+}
+
+.house:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+/* Ravenclaw Section */
+.house.ravenclaw {
+  background: url("blue.png") no-repeat center center;
+  background-size: cover;
+  padding: 60px 20px;
+  color: white;
+}
+
+.house-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.crest {
+  width: 220px;
+  flex-shrink: 0;
+}
+
+.house-text {
+  background: rgba(18, 18, 61, 0.6);
+  padding: 25px 30px;
+  border-radius: 15px;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.house-text h2 {
+  margin-top: 0;
+  font-size: 2.5rem;
+  color: #fff;
+}
+/* Sly Section */
+.house.Slytherin {
+  background: url("green.png") no-repeat center center;
+  background-size: cover;
+  padding: 60px 20px;
+  color: white;
+}
+
+.house-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.crest {
+  width: 220px;
+  flex-shrink: 0;
+}
+
+.house-text {
+  background: rgba(18, 18, 61, 0.6);
+  padding: 25px 30px;
+  border-radius: 15px;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.house-text h2 {
+  margin-top: 0;
+  font-size: 2.5rem;
+  color: #fff;
+}
+/* gry Section */
+.house.Gryffindor {
+  background: url("red.png") no-repeat center center;
+  background-size: cover;
+  padding: 60px 20px;
+  color: white;
+}
+
+.house-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.crest {
+  width: 220px;
+  flex-shrink: 0;
+}
+
+.house-text {
+  background: rgba(18, 18, 61, 0.6);
+  padding: 25px 30px;
+  border-radius: 15px;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.house-text h2 {
+  margin-top: 0;
+  font-size: 2.5rem;
+  color: #fff;
+}
+/* huf Section */
+.house.Hufflepuff {
+  background: url("yellow.png") no-repeat center center;
+  background-size: cover;
+  padding: 60px 20px;
+  color: white;
+}
+
+.house-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.crest {
+  width: 220px;
+  flex-shrink: 0;
+}
+
+.house-text {
+  background: rgba(18, 18, 61, 0.6);
+  padding: 25px 30px;
+  border-radius: 15px;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.house-text h2 {
+  margin-top: 0;
+  font-size: 2.5rem;
+  color: #fff;
+}
+

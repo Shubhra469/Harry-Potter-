@@ -1,0 +1,362 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== GLOBAL ===== */
+body {
+  font-family: "Georgia", serif;
+  color: white;
+  background-color: black;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, p {
+  margin-bottom: 10px;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(10, 10, 25, 0.4);
+  backdrop-filter: blur(12px);
+  padding: 15px 40px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+  transition: background 0.4s ease;
+}
+
+.navbar:hover {
+  background: rgba(10, 10, 25, 0.6);
+}
+
+.logo {
+  font-size: 28px;
+  font-family: 'Cinzel Decorative', serif;
+  font-weight: 700;
+  background: linear-gradient(90deg, gold, #ffcc33, #ffea94);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease, text-shadow 0.4s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 35px gold, 0 0 10px #fff;
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: gold;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  background: url("hogwarts.jpg") no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  padding: 0 20px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.6),
+    rgba(15, 10, 30, 0.9)
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  animation: fadeUp 1.5s ease forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 12px 25px;
+  background: #3c3c66;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: gold;
+  color: black;
+  box-shadow: 0 0 20px gold, 0 0 40px gold;
+  transform: translateY(-3px) scale(1.05);
+}
+
+
+/* ===== SORTING SECTION ===== */
+.sorting {
+  background: #200d3c;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.sorting h2 {
+  font-size: 24px;
+  margin-bottom: 50px;
+  font-style: italic;
+  color: #f5f5f5;
+}
+
+.sorting-controls {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+#searchHouse {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  min-width: 250px;
+  background: rgba(255,255,255,0.9);
+}
+
+#searchHouse:focus {
+  box-shadow: 0 0 10px gold;
+}
+
+.btn-add {
+  padding: 12px 24px;
+  background: gold;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-add:hover {
+  background: #ffd700;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px gold;
+}
+
+.houses {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.house {
+  text-align: center;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.house img {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.3));
+}
+
+.house p {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: gold;
+}
+
+.house:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* ===== DYNAMIC HOUSE INFO ===== */
+.house-info {
+  background: radial-gradient(circle at center, #1a1a2e, #000);
+  padding: 100px 20px;
+  text-align: center;
+  display: none;
+  animation: fadeIn 1s ease forwards;
+}
+
+.house-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.crest {
+  width: 220px;
+  border-radius: 15px;
+  filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.4));
+}
+
+.house-text {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 500px;
+  text-align: left;
+  line-height: 1.7;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.house-text h2 {
+  font-size: 2rem;
+  color: gold;
+  margin-bottom: 10px;
+}
+
+.house-text strong {
+  color: gold;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.highlight {
+  box-shadow: 0 0 30px 10px gold;
+  transition: all 0.5s ease-in-out;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .house-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .house-text {
+    max-width: 90%;
+  }
+
+  .btn {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.glow-effect {
+  box-shadow: 0 0 30px 10px gold;
+  animation: glowPulse 1.5s ease-in-out;
+  border-radius: 15px;
+}
+
+@keyframes glowPulse {
+  0% { box-shadow: 0 0 5px gold; }
+  50% { box-shadow: 0 0 30px gold; }
+  100% { box-shadow: 0 0 5px gold; }
+}
+
+.small-hero {
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.content-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    width: 280px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.card h3 {
+    color: gold;
+}
+

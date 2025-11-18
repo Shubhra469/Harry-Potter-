@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manage Houses - Harry Potter</title>
+  <link rel="stylesheet" href="crud.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Harry Potter Admin</div>
+      <ul class="nav-links">
+        <li><a href="web.html">Back to Houses</a></li>
+        <li><a href="spells-crud.html">Manage Spells</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Manage Houses</h1>
+
+    <!-- Add House Form -->
+    <section class="form-section">
+      <h2>Add New House</h2>
+      <form id="addHouseForm">
+        <input type="text" id="name" placeholder="House Name" required />
+        <input type="text" id="colors" placeholder="Colors" />
+        <input type="text" id="symbol" placeholder="Symbol" />
+        <input type="text" id="head" placeholder="House Head" />
+        <input type="text" id="traits" placeholder="Traits (comma-separated)" />
+        <textarea id="description" placeholder="Description" rows="4"></textarea>
+        <button type="submit" class="btn-submit">Add House</button>
+      </form>
+    </section>
+
+    <!-- Search and Filter -->
+    <section class="filter-section">
+      <input type="text" id="searchInput" placeholder="Search houses..." />
+      <input type="text" id="filterHead" placeholder="Filter by head..." />
+      <select id="sortBy">
+        <option value="">Sort by...</option>
+        <option value="name">Name</option>
+        <option value="head">Head</option>
+        <option value="createdAt">Date Created</option>
+      </select>
+      <select id="sortOrder">
+        <option value="asc">Ascending</option>
+        <option value="desc">Descending</option>
+      </select>
+      <button id="resetBtn" class="btn-reset">Reset Filters</button>
+    </section>
+
+    <!-- Houses List -->
+    <section class="list-section">
+      <h2>Houses List</h2>
+      <div id="housesList" class="list-container">
+        <p>Loading houses...</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Edit Modal -->
+  <div id="editModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Edit House</h2>
+      <form id="editHouseForm">
+        <input type="hidden" id="editId" />
+        <input type="text" id="editName" placeholder="House Name" required />
+        <input type="text" id="editColors" placeholder="Colors" />
+        <input type="text" id="editSymbol" placeholder="Symbol" />
+        <input type="text" id="editHead" placeholder="House Head" />
+        <input type="text" id="editTraits" placeholder="Traits (comma-separated)" />
+        <textarea id="editDescription" placeholder="Description" rows="4"></textarea>
+        <button type="submit" class="btn-submit">Update House</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="houses-crud.js"></script>
+</body>
+
+</html>

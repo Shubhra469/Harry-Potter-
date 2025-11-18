@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manage Spells - Harry Potter</title>
+  <link rel="stylesheet" href="crud.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Harry Potter Admin</div>
+      <ul class="nav-links">
+        <li><a href="explore.html">Back to Spells</a></li>
+        <li><a href="houses-crud.html">Manage Houses</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Manage Spells</h1>
+
+    <!-- Add Spell Form -->
+    <section class="form-section">
+      <h2>Add New Spell</h2>
+      <form id="addSpellForm">
+        <input type="text" id="name" placeholder="Spell Name" required />
+        <input type="text" id="type" placeholder="Spell Type" required />
+        <textarea id="description" placeholder="Description" rows="4" required></textarea>
+        <button type="submit" class="btn-submit">Add Spell</button>
+      </form>
+    </section>
+
+    <!-- Search and Filter -->
+    <section class="filter-section">
+      <input type="text" id="searchInput" placeholder="Search spells..." />
+      <input type="text" id="filterType" placeholder="Filter by type..." />
+      <select id="sortBy">
+        <option value="">Sort by...</option>
+        <option value="name">Name</option>
+        <option value="type">Type</option>
+        <option value="createdAt">Date Created</option>
+      </select>
+      <select id="sortOrder">
+        <option value="asc">Ascending</option>
+        <option value="desc">Descending</option>
+      </select>
+      <button id="resetBtn" class="btn-reset">Reset Filters</button>
+    </section>
+
+    <!-- Spells List -->
+    <section class="list-section">
+      <h2>Spells List</h2>
+      <div id="spellsList" class="list-container">
+        <p>Loading spells...</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Edit Modal -->
+  <div id="editModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Edit Spell</h2>
+      <form id="editSpellForm">
+        <input type="hidden" id="editId" />
+        <input type="text" id="editName" placeholder="Spell Name" required />
+        <input type="text" id="editType" placeholder="Spell Type" required />
+        <textarea id="editDescription" placeholder="Description" rows="4" required></textarea>
+        <button type="submit" class="btn-submit">Update Spell</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="spells-crud.js"></script>
+</body>
+
+</html>
