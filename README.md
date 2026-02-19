@@ -1,7 +1,6 @@
 # ⚡ Mischief Managed – Harry Potter Fan Website
 
 Welcome to a magical web experience inspired by the world of Harry Potter 🧙‍♂️
-
 This project recreates elements from the wizarding world through a creative and interactive website.
 
 ---
@@ -31,4 +30,5 @@ HTML | CSS | JavaScript
 ---
 
 ⚠️ This is a non-commercial fan project built for educational purposes.
+
 
